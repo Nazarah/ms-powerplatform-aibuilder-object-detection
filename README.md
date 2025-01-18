@@ -29,10 +29,44 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 ## Creating the Machine Learning Model
 
 1. In Power Apps or Power Automate, the AI Models (Previously AI Builder) can be found from the left panel.
-2. Click AI Models > Images (on top of the page). Then select "Detect custom objects in images".
+2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. (SS1)
 3. On the preview window, click `Create Custom Model`
-
+4. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. (SS2)
+5. Click `Next`.
+6. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. (SS3, 43-56)
+7. Click `Next`
+8. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from here. The images under **train** folder should be used. (SS4)
+**IMPORTANT: **
+> For each object name defined in the previous step, there should be **atleast 15 relevant images** to train the model. While tagging objects in an image with the defined object names, AI Builder would indicate the readiness of each tags and how many objects have been identified for a specific tag during the MLM creation.
+9. After selecting the images, click `Upload <number> images`.
+10. CLick `Done` on the dialog when all the images have been uploaded. Click `Next` on the **Add images** view to proceed for tagging the images.
+11. In **Tag images**, view, it should be posisble to see which which images have already been tagged or not. The right side panel shows **tagging requirements** and **progress** for each object
+12. Select an image to start tagging. Tagging can be performed in fullscreen. The algorithm will suggest bounding boxes around the objects in the picture that can be resized to adjust to object. Custom boxes can be also drawn and dragged across the objects on the images. (SS5 + SS6)
+13. After tagging is done, click `Done tagging`. Click `Next`. 
+14. In the Model Summary view, the model's details can be reviewed. SS7
+15. If everything appears acceptable, click `Train`. The training will require a couple of minutes to complete. SS8
 
 ### Things to consider:
 1. Max 6 MB of image sizes to trainin. Supported formats: JPG, PNG, BMP. Minimum width / height of 256 pixels x 256 pixels
 2. For each tag created, there should be atleast 15 relevant images to train the model. AI Builder would indicate the readiness of each tags and how many objects have been identified for a specific tag during the MLM creation.
+3. Test images should be available at hand to quickly tryout the model before publishing.
+
+## Testing the trained model
+
+After the model has finished training, important details about the newly trained model can be viewed on a details page. (SS9)
+Before publihing the model, a quick test should be done to check the effectiveness of the trained model
+
+1. Images separate from the ones used for training should be used to train the data. From the bulk images provided here, The images under **train** folder should be used.
+2. When the testing is complete, the detected, chosen fields and the associated confidence scores for retrieving the individual fields compared to the trained model can be viewed.
+
+
+## Publishing the trained model
+
+The model can be used into apps and flows when it is published. After the test provides satisfying scores, click `Publish` to make the model available for use.
+
+## References
+
+1. [Microsoft AI Builder](https://learn.microsoft.com/en-us/ai-builder/overview)
+2. [Microsoft Power Apps](https://learn.microsoft.com/en-us/power-apps/powerapps-overview)
+3. [Microsoft Power Automate](https://learn.microsoft.com/en-us/training/powerplatform/power-automate)
+
