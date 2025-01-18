@@ -30,13 +30,13 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 
 1. In Power Apps or Power Automate, the AI Models (Previously AI Builder) can be found from the left panel.
 2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png) </br></be>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/1-accessing-ai-models.png) </br></be>
 4. On the preview window, click `Create Custom Model`
 5. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)</br></be>
 6. Click `Next`.
 7. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/3-object-naming.gif)
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/3-object-naming.gif)</br></be>
 8. Click `Next`
 9. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip). The images under **train** folder should be used. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/4-add-image.gif) </br></br>
@@ -49,9 +49,9 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 13. Select an image to start tagging. Tagging can be performed in fullscreen. The algorithm will suggest bounding boxes around the objects in the picture that can be resized to adjust to object. Custom boxes can be also drawn and dragged across the objects on the images. (SS5 + SS6)
 14. After tagging is done, click `Done tagging`. Click `Next`. 
 15. In the Model Summary view, the model's details can be reviewed. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/7-Review.gif)
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/7-Review.gif) </br></br>
 16. If everything appears acceptable, click `Train`. The training will require a couple of minutes to complete. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/8-train.gif)
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/8-train.gif) </br></br>
 
 ### 🤔 Things to consider:
 1. **Max 6 MB** of image sizes can be used to train the model. Supported formats: **JPG**, **PNG**, **BMP**. Minimum width / height of **256 pixels x 256 pixels**. More details can be found [here](https://learn.microsoft.com/en-us/ai-builder/collect-images#format-and-size).
@@ -63,14 +63,19 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 After the model has finished training, important details about the newly trained model can be viewed on a details page. (SS9)
 Before publihing the model, a quick test should be done to check the effectiveness of the trained model.</br></br>
 
-1. Images separate from the ones used for training should be used to train the data. From the bulk images provided [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip). The images under **train** folder should be used.
-2. On the detailed page, click `Quick test`. 
-3. When the testing is complete, the detected, chosen fields and the associated confidence scores for retrieving the individual fields compared to the trained model can be viewed.
+1. On the detailed page, click `Quick test`. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/10-test-the-model.gif) </br></br>
+2. Images separate from the ones used for training should be used to train the data. From the bulk images provided [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip). The images under **train** folder should be used.
+3. When the testing is complete, the detected, chosen fields and the associated confidence scores for retrieving the individual fields compared to the trained model can be viewed. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/11-test-score.gif) </br></br>
 
 
 ## 🚀 Publishing the trained model
 
 The model can be used into apps and flows when it is published. After the test provides satisfying scores, click `Publish` to make the model available for use.
+</br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/12-publish-model.gif) </br></br>
+
 
 ## 🌐 References
 
