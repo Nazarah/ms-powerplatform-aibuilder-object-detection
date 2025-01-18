@@ -30,13 +30,13 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 
 1. In Power Apps or Power Automate, the AI Models (Previously AI Builder) can be found from the left panel.
 2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/1-accessing-ai-models.png) </br></be>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/1-accessing-ai-models.png) </br></br>
 4. On the preview window, click `Create Custom Model`
 5. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)</br></be>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)</br></br>
 6. Click `Next`.
 7. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. </br></br>
-![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/3-object-naming.gif)</br></be>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/3-object-naming.gif)</br></br>
 8. Click `Next`
 9. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip). The images under **train** folder should be used. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/4-add-image.gif) </br></br>
