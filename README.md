@@ -44,9 +44,12 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 **IMPORTANT: **
 > For each object name defined in the previous step, there should be **atleast 15 relevant images** to train the model. While tagging objects in an image with the defined object names, AI Builder would indicate the readiness of each tags and how many objects have been identified for a specific tag during the MLM creation. </br></br>
 10. After selecting the images, click `Upload <number> images`.
-11. CLick `Done` on the dialog when all the images have been uploaded. Click `Next` on the **Add images** view to proceed for tagging the images.
-12. In **Tag images**, view, it should be posisble to see which which images have already been tagged or not. The right side panel shows **tagging requirements** and **progress** for each object
-13. Select an image to start tagging. Tagging can be performed in fullscreen. The algorithm will suggest bounding boxes around the objects in the picture that can be resized to adjust to object. Custom boxes can be also drawn and dragged across the objects on the images. (SS5 + SS6)
+11. CLick `Done` on the dialog when all the images have been uploaded. Click `Next` on the **Add images** view to proceed for tagging the images. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/5-upload-images.gif) </br></br>
+12. In **Tag images**, view, it should be posisble to see which which images have already been tagged or not. The right side panel shows **tagging requirements** and **progress** for each object. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/6-tagging-preview.gif) </br></br>
+13. Select an image to start tagging. Tagging can be performed in fullscreen. The algorithm will suggest bounding boxes around the objects in the picture that can be resized to adjust to object. Custom boxes can be also drawn and dragged across the objects on the images. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/6-tagging.gif) </br></br>
 14. After tagging is done, click `Done tagging`. Click `Next`. 
 15. In the Model Summary view, the model's details can be reviewed. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/7-Review.gif) </br></br>
