@@ -29,13 +29,14 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 ## Creating the Machine Learning Model
 
 1. In Power Apps or Power Automate, the AI Models (Previously AI Builder) can be found from the left panel.
-2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. (SS1)
-3. On the preview window, click `Create Custom Model`
-4. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. (SS2)
-5. Click `Next`.
-6. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. (SS3, 43-56)
-7. Click `Next`
-8. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from here. The images under **train** folder should be used. (SS4)
+2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. </br></br>
+![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)
+4. On the preview window, click `Create Custom Model`
+5. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. (SS2)
+6. Click `Next`.
+7. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. (SS3, 43-56)
+8. Click `Next`
+9. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from here. The images under **train** folder should be used. (SS4)
 **IMPORTANT: **
 > For each object name defined in the previous step, there should be **atleast 15 relevant images** to train the model. While tagging objects in an image with the defined object names, AI Builder would indicate the readiness of each tags and how many objects have been identified for a specific tag during the MLM creation.
 9. After selecting the images, click `Upload <number> images`.
