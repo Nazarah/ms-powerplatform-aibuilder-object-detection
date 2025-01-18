@@ -1,5 +1,5 @@
 # 🤖 Using MS Power Platform AI Builder to train MLM for Object Detection 🤖
-The project demonstrate how MS Power Platform's AI builder can be used to create a MLM to identify objects from images. The developed model can also be integrated in a Power App or Power Automate Flow. This project was part of the micro degree on Power Platform, organized by Microsoft and Kajaani University of Applied Science in Finland.
+The project demonstrate how **MS Power Platform's AI builder** can be used to create a **Machine Learning Model (MLM)** to identify objects from images. The developed model can also be integrated in a **Power App** or **Power Automate Flow**. This project was part of the [micro degree](https://skill.edukamu.fi/powerplatform/) on Power Platform, organized by **Microsoft** and **Kajaani University of Applied Science** in Finland.
 
 ## 🎯 Objective
 
@@ -9,9 +9,9 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 
 ## ⚙️ Used Services
 
-1. MS Power Platform AI Builder: AI-enabled business solutions can be built quickly for streamlining workflows. Comes with MS Copilot to enhance productivity. Usecases include (but not limited to) document processing (invoice processing, email analysis, document dematerialization, etc.) and object identifications (object counting, brand logo recognition, object recognition and learning, etc.)
-2. MS Power Platform Power Apps: Enables to build professional business solutions with low/no code development. Two types of applications, model-driven and canvas, can be implemented from scratch or with the help of MS Copilot 
-3. MS Power Platform Power Automate: Allows to optimize business processes by end-to-end automation. It is scalable to extend across the organization with built-in security, governence and 360 degree monitoring. Automated processes can be integrated  with Power Apps, Copilots, websites, etc.
+1. **MS Power Platform AI Builder**: AI-enabled business solutions can be built quickly for streamlining workflows. Comes with MS Copilot to enhance productivity. Usecases include (but not limited to) document processing (invoice processing, email analysis, document dematerialization, etc.) and object identifications (object counting, brand logo recognition, object recognition and learning, etc.)
+2. **MS Power Platform Power Apps**: Enables to build professional business solutions with low/no code development. Two types of applications, model-driven and canvas, can be implemented from scratch or with the help of MS Copilot 
+3. **MS Power Platform Power Automate**: Allows to optimize business processes by end-to-end automation. It is scalable to extend across the organization with built-in security, governence and 360 degree monitoring. Automated processes can be integrated  with Power Apps, Copilots, websites, etc.
 
 ## 💭 Prior Preparations
 - Signing up to MS Power Platform using a work or school account from Microsoft. The account might already have a trial license associated to use the Power Platform services.
@@ -22,22 +22,22 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 
 
 ##  🎬 Actions Executed
-1. Training, testing and publishing a machine learning model (MLM) to identify green tea types from packages detected from testing images
-2. Integrating the created MLM into a MS Power App (Canvas App)
-3. Integrating the created MLM into a Power Automate Flow
+1. Training, testing and publishing a machine learning model (MLM) to identify green tea types from packages detected from testing images.
+2. Integrating the created MLM into a MS Power App (Canvas App).
+3. Integrating the created MLM into a Power Automate Flow.
 
 ## 🤼🏼‍♀️ Training the Machine Learning Model
 
 1. In Power Apps or Power Automate, the AI Models (Previously AI Builder) can be found from the left panel.
 2. Click **AI Models** > **Images** (on top of the page). Then select **Detect custom objects in images**. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/1-accessing-ai-models.png) </br></br>
-4. On the preview window, click `Create Custom Model`
+4. On the preview window, click `Create Custom Model`.
 5. On **Select Domain** view, click on `Common Objects`. Here, the project can be renamed as well. This model has been named as **Green tea type**. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/2-model-domain-and-naming.png)</br></br>
 6. Click `Next`.
 7. On **Choose Objects** view, object names to be identified from training/test images can be added. These will be used later for tagging objects in training images. For training this model, the object names added are **Green Tea Mint**, **Green Tea Cinnamon**, and **Green Tea Rose**. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/3-object-naming.gif)</br></br>
-8. Click `Next`
+8. Click `Next`.
 9. In **Add images** view, training images will be added. Images can be added from local storage, SharePoint or Azure Blob storages. The images used for training the model can be found downloaded from [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip). The images under **train** folder should be used. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/4-add-image.gif) </br></br>
 
@@ -46,15 +46,18 @@ The project demonstrate how MS Power Platform's AI builder can be used to create
 10. After selecting the images, click `Upload <number> images`.
 11. CLick `Done` on the dialog when all the images have been uploaded. Click `Next` on the **Add images** view to proceed for tagging the images. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/5-upload-images.gif) </br></br>
-12. In **Tag images**, view, it should be posisble to see which which images have already been tagged or not. The right side panel shows **tagging requirements** and **progress** for each object. </br></br>
+12. In **Tag images** view, it should be posisble to see which which images have already been tagged or not. The right side panel shows **tagging requirements** and **progress** for each object. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/6-tagging-preview.gif) </br></br>
 13. Select an image to start tagging. Tagging can be performed in fullscreen. The algorithm will suggest bounding boxes around the objects in the picture that can be resized to adjust to object. Custom boxes can be also drawn and dragged across the objects on the images. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/6-tagging.gif) </br></br>
 14. After tagging is done, click `Done tagging`. Click `Next`. 
-15. In the Model Summary view, the model's details can be reviewed. </br></br>
+15. In the **Model Summary** view, the model's details can be reviewed. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/7-Review.gif) </br></br>
 16. If everything appears acceptable, click `Train`. The training will require a couple of minutes to complete. </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/8-train.gif) </br></br>
+
+**IMPORTANT: **
+> In the free trials for MS AI Builder, all trained models will be available to access for **30 days** only since creation. Afterwards, a subscription needs to be purchased to be able to utilize this service </br></br>
 
 ### 🤔 Things to consider:
 1. **Max 6 MB** of image sizes can be used to train the model. Supported formats: **JPG**, **PNG**, **BMP**. Minimum width / height of **256 pixels x 256 pixels**. More details can be found [here](https://learn.microsoft.com/en-us/ai-builder/collect-images#format-and-size).
@@ -85,4 +88,5 @@ The model can be used into apps and flows when it is published. After the test p
 1. [Microsoft AI Builder](https://learn.microsoft.com/en-us/ai-builder/overview)
 2. [Microsoft Power Apps](https://learn.microsoft.com/en-us/power-apps/powerapps-overview)
 3. [Microsoft Power Automate](https://learn.microsoft.com/en-us/training/powerplatform/power-automate)
+4. [Power Platform Micro Degree, Microsoft Skills for Jobs - Finland](https://skill.edukamu.fi/powerplatform/) 
 
