@@ -82,6 +82,24 @@ The model can be used into apps and flows when it is published. After the test p
 </br></br>
 ![image](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/images/12-publish-model.gif) </br></br>
 
+## Using the trained Model in a Flow
+
+After publishing, the object detection model can be used in a flow. A special component is available to the signed in account to add that analyzes any image and detects objects based on the trained object detection model. </br></br>
+
+1. Click `Use model`. </br></br>
+
+2. Click `Build intelligent automations`.
+3. Make sure that you are signed into Power Automate. When the Power Automate view finishes loading, it would show which **Data verse** instance the flow will be connected to. Click `Continue`.
+4. **Power Automate** will load the flow, already configured to run manually. The object detection model will be already integrated within the flow. 
+5. It is possible to click each step within the flow, view the settings and make changes to the description. There is also **MS Copilot assistant** available to make changes to the flow. (To keep the experiment simple, only the description text in **"Detect and count objects in images"** step has been changed).
+6. To see it in action, click `Save` on top right corner.
+7. Click `Test`. Under **Test flow** side panel, check `Manually` and then click `Test`.
+9. When the side panel changes into **Run flow**, click `Import` and select a test image. They can be found [here](https://github.com/Nazarah/ms-powerplatform-aibuilder-object-detection/blob/main/sample-data/ObjectDetection_GreenTea.zip) under the folder **test**.
+10. Click `Run Flow`. If the flow runs successfully, it would show the status and will extract the needed data. It will prompt to navigate toward **Flow Runs Pages** to  monitor it.
+11. From **My Flows** view in **MS Power Automate**, The created flow can be rerun.
+
+
+## Using the trained Model in an App
 
 ## 🌐 References
 
